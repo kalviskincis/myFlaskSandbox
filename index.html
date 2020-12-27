@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Izvēles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+function pieteikums(){
+	
+  var otrsLogs = window.open("pieteikums.html");
+  var kkk = document.getElementById("kas").value;
+  otrsLogs.onload = function(){	  
+    otrsLogs.pulcins.value=kkk;
+    this.iesniegums.diena.value=document.getElementById("kad").value;    
+  };
+}
+</script>
+    </head>
+    <body>
+       <form name="atlase" method="POST">
+           <select id="kas">
+             <option> Koris </option>  
+             <option> Futbols </option>  
+             <option> Dejas </option>  
+             <option> Māksla </option>  
+           </select>
+            <select id="kad">
+             <option> Pirmd </option>  
+             <option> Otrd </option>  
+             <option> Trešd </option>  
+             <option> Cet </option>  
+           </select>
+           <input type="button" value="pieteikties" onclick="pieteikums()"/>
+      </form>
+           
+        
+    </body>
+</html>
