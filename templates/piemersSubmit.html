@@ -6,31 +6,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
 function pieteikums(){
-	
   var otrsLogs = window.open("pieteikums.html");
-  var kkk = document.getElementById("kas").value;
-  otrsLogs.onload = function(){	  
-    otrsLogs.pulcins.value=kkk;
-    this.iesniegums.diena.value=document.getElementById("kad").value;    
+  otrsLogs.onload = function(){
+    otrsLogs.pulcins.value=document.getElementById("kas").value;
+    this.iesniegums.diena.value=document.getElementById("kad").value;
   };
+}
+function pieteikumsTe(){
+   let forma=document.getElementById("pforma");
+   let vards=document.createElement("input");
+   vards.name="vards";
+   forma.appendChild(vards);
+   let sutit=document.createElement("input");
+   sutit.value="pieteikties";
+   sutit.type="submit";
+   forma.appendChild(sutit);
 }
 </script>
     </head>
     <body>
-       <form name="atlase" method="POST">
-           <select id="kas">
+       <form name="atlase" method="POST" id="pforma" action="https://interesu-izglitibas-IS-1.nitobenito.repl.co/testForm">
+           <select id="kas" name="kas">
              <option> Koris </option>  
              <option> Futbols </option>  
              <option> Dejas </option>  
              <option> Māksla </option>  
            </select>
-            <select id="kad">
+            <select id="kad" name="kad">
              <option> Pirmd </option>  
              <option> Otrd </option>  
              <option> Trešd </option>  
              <option> Cet </option>  
            </select>
            <input type="button" value="pieteikties" onclick="pieteikums()"/>
+           <input type="button" value="pieteikties te" onclick="pieteikumsTe()"/>
       </form>
            
         
