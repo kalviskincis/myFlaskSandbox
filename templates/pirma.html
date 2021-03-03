@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Pirmā lapa</title>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <script src='../static/pirma.js'></script>
+
+</head>
+
+<body>
+    <div id='pirma'>
+        <h1>Esmu pirmā lapa
+        </h1>
+        <p>Bubuu</p>
+        <form method="POST">
+            <input type="text" id='teksts' name='teksts'>
+            <button type="button" onclick="saucOtro()">Ielādē otro</button>
+            <button type="submit" formaction="/vajagOtro">Sūti uz otro</button>
+        </form>
+    </div>
+
+    <div id='otra'></div>
+
+</body>
+
+
+</html>
