@@ -90,7 +90,7 @@ def lasaFailu(path):
 @app.route('/vajagOtro', methods=['POST'])
 def otraLasa():
     teksts = request.form['teksts']
-    print(teksts)
+    # print(teksts)
     return render_template('otraTpl.html', uzraksts = teksts )
 
 
